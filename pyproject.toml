@@ -1,0 +1,23 @@
+[project]
+name = "linkedin_job_tracker_auto_notifier"
+version = "0.1.0"
+description = "linkedin_job_tracker_auto_notifier using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.177.0,<1.0.0"
+]
+
+[project.scripts]
+linkedin_job_tracker_auto_notifier = "linkedin_job_tracker_auto_notifier.main:run"
+run_crew = "linkedin_job_tracker_auto_notifier.main:run"
+train = "linkedin_job_tracker_auto_notifier.main:train"
+replay = "linkedin_job_tracker_auto_notifier.main:replay"
+test = "linkedin_job_tracker_auto_notifier.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

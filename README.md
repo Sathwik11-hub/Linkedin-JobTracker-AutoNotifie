@@ -1,83 +1,54 @@
-# Linkedin-JobTracker-AutoNotifie
-Automate your LinkedIn job tracking and notifications with crewAI!
-This project sets up a multi-agent AI system to monitor, track, and notify you about relevant LinkedIn jobs—powered by the flexible and powerful crewAI
- framework.
+# LinkedinJobTrackerAutoNotifier Crew
 
-With just a few steps, you’ll have your intelligent crew of AI agents working together to save time and streamline your job application process.
+Welcome to the LinkedinJobTrackerAutoNotifier Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
-📦 Installation
-Requirements
+## Installation
 
-Python: >=3.10 <3.14
+Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
-Package Manager: UV
- (fast dependency management)
+First, if you haven't already, install uv:
 
-Setup
-
-Install uv if not already installed:
-
+```bash
 pip install uv
+```
 
+Next, navigate to your project directory and install the dependencies:
 
-Navigate to your project directory and install dependencies:
-
+(Optional) Lock the dependencies and install them by using the CLI command:
+```bash
 crewai install
+```
+### Customizing
 
-⚙️ Customization
+**Add your `OPENAI_API_KEY` into the `.env` file**
 
-Before running the project, configure your environment and agents:
+- Modify `src/linkedin_job_tracker_auto_notifier/config/agents.yaml` to define your agents
+- Modify `src/linkedin_job_tracker_auto_notifier/config/tasks.yaml` to define your tasks
+- Modify `src/linkedin_job_tracker_auto_notifier/crew.py` to add your own logic, tools and specific args
+- Modify `src/linkedin_job_tracker_auto_notifier/main.py` to add custom inputs for your agents and tasks
 
-Add your OpenAI API key to the .env file:
+## Running the Project
 
-OPENAI_API_KEY=your_api_key_here
+To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
+```bash
+$ crewai run
+```
 
-Configure your agents and tasks:
+This command initializes the linkedin_job_tracker_auto_notifier Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-src/linkedin_job_tracker_auto_notifier/config/agents.yaml → Define agents and their roles
+This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
-src/linkedin_job_tracker_auto_notifier/config/tasks.yaml → Define tasks and objectives
+## Understanding Your Crew
 
-src/linkedin_job_tracker_auto_notifier/crew.py → Add tools, logic, or custom args
+The linkedin_job_tracker_auto_notifier Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
-src/linkedin_job_tracker_auto_notifier/main.py → Add custom inputs
+## Support
 
-▶️ Running the Project
+For support, questions, or feedback regarding the LinkedinJobTrackerAutoNotifier Crew or crewAI.
+- Visit our [documentation](https://docs.crewai.com)
+- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
+- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
+- [Chat with our docs](https://chatg.pt/DWjSBZn)
 
-Start your crew of AI agents from the project root:
-
-crewai run
-
-
-By default, the agents will collaborate to generate a report.md file in the root folder, showcasing a research task example (you can replace it with LinkedIn job tracking workflows).
-
-🧠 Understanding Your Crew
-
-The LinkedinJobTrackerAutoNotifier Crew is powered by multiple specialized AI agents. Each agent has unique:
-
-Roles → What they do
-
-Goals → Why they exist
-
-Tools → How they achieve tasks
-
-These configurations live in:
-
-config/agents.yaml → Define capabilities
-
-config/tasks.yaml → Define workflows
-
-The agents collaborate seamlessly to achieve complex objectives—like monitoring LinkedIn jobs and sending smart notifications.
-
-🤝 Support
-
-For help, questions, or feedback:
-
-📖 Documentation
-
-💻 GitHub Repository
-
-💬 Join our Discord
-
-🤖 Chat with our Docs
+Let's create wonders together with the power and simplicity of crewAI.
